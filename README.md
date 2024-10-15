@@ -197,7 +197,7 @@ SELECT * FROM BOOKS
 WHERE CATEGORY ='Classic'
 ```
 
-**Task 8. Task 8: Find Total Rental Income by Category**:
+**Task 8.Find Total Rental Income by Category**:
 
 ```sql
 SELECT CATEGORY,
