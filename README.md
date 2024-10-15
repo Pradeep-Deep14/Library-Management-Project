@@ -190,14 +190,14 @@ GROUP BY 1,2
 
 The following SQL queries were used to address specific questions:
 
-Task 7. **Retrieve All Books in a Specific Category**:
+**Task 7. Retrieve All Books in a Specific Category**:
 
 ```sql
 SELECT * FROM BOOKS
 WHERE CATEGORY ='Classic'
 ```
 
-Task 8. **Task 8: Find Total Rental Income by Category**:
+**Task 8. Task 8: Find Total Rental Income by Category**:
 
 ```sql
 SELECT CATEGORY,
@@ -206,7 +206,7 @@ FROM BOOKS
 GROUP BY 1
 ```
 
-Task 9. **List Members Who Registered in the Last 180 Days**:
+**Task 9. List Members Who Registered in the Last 180 Days**:
 ```sql
 INSERT INTO members(member_id, member_name, member_address, reg_date)
 VALUES
@@ -220,7 +220,7 @@ SELECT * FROM MEMBERS
 WHERE REG_DATE >= CURRENT_DATE - INTERVAL '180 Days'
 ```
 
-Task 10. **List Employees with Their Branch Manager's Name and their branch details**:
+**Task 10.List Employees with Their Branch Manager's Name and their branch details**:
 
 ```sql
 SELECT E.*,
@@ -233,14 +233,14 @@ JOIN EMPLOYEES E1
 ON B.MANAGER_ID=E1.EMP_ID
 ```
 
-Task 11. **Create a Table of Books with Rental Price Above a Certain Threshold**:
+**Task 11.Create a Table of Books with Rental Price Above a Certain Threshold**:
 ```sql
 CREATE TABLE BOOKS_PRICE AS
 SELECT * FROM BOOKS
 WHERE RENTAL_PRICE > 7
 ```
 
-Task 12: **Retrieve the List of Books Not Yet Returned**
+**Task 12: Retrieve the List of Books Not Yet Returned**
 ```sql
 SELECT I.ISSUED_BOOK_NAME
 FROM ISSUED_STATUS I
@@ -252,7 +252,7 @@ WHERE R.RETURN_ID IS NULL
 
 ## Advanced SQL Operations
 
-Task 13: **Identify Members with Overdue Books**  
+**Task 13: Identify Members with Overdue Books**  
 Write a query to identify members who have overdue books (assume a 30-day return period). Display the member's_id, member's name, book title, issue date, and days overdue.
 
 ```sql
@@ -273,7 +273,7 @@ ORDER BY 1
 ```
 
 
-Task 14: **Update Book Status on Return**  
+**Task 14: Update Book Status on Return**  
 Write a query to update the status of books in the books table to "Yes" when they are returned (based on entries in the return_status table).
 
 ```sql
@@ -451,8 +451,6 @@ BEGIN
     END IF;
 END;
 $$
-
-
 
 ```
 
