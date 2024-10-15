@@ -190,14 +190,14 @@ GROUP BY 1,2
 
 The following SQL queries were used to address specific questions:
 
-**Task 7. Retrieve All Books in a Specific Category**:
+**Task 7: Retrieve All Books in a Specific Category**:
 
 ```sql
 SELECT * FROM BOOKS
 WHERE CATEGORY ='Classic'
 ```
 
-**Task 8.Find Total Rental Income by Category**:
+**Task 8:Find Total Rental Income by Category**:
 
 ```sql
 SELECT CATEGORY,
@@ -206,7 +206,7 @@ FROM BOOKS
 GROUP BY 1
 ```
 
-**Task 9. List Members Who Registered in the Last 180 Days**:
+**Task 9: List Members Who Registered in the Last 180 Days**:
 ```sql
 INSERT INTO members(member_id, member_name, member_address, reg_date)
 VALUES
@@ -220,7 +220,7 @@ SELECT * FROM MEMBERS
 WHERE REG_DATE >= CURRENT_DATE - INTERVAL '180 Days'
 ```
 
-**Task 10.List Employees with Their Branch Manager's Name and their branch details**:
+**Task 10: List Employees with Their Branch Manager's Name and their branch details**:
 
 ```sql
 SELECT E.*,
@@ -233,7 +233,7 @@ JOIN EMPLOYEES E1
 ON B.MANAGER_ID=E1.EMP_ID
 ```
 
-**Task 11.Create a Table of Books with Rental Price Above a Certain Threshold**:
+**Task 11: Create a Table of Books with Rental Price Above a Certain Threshold**:
 ```sql
 CREATE TABLE BOOKS_PRICE AS
 SELECT * FROM BOOKS
