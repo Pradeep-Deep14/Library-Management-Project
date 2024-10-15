@@ -311,25 +311,6 @@ BEGIN
 END;
 $$
 ```
--- Testing FUNCTION add_return_records
-
-issued_id = IS135
-ISBN = WHERE isbn = '978-0-307-58837-1'
-
-SELECT * FROM books
-WHERE isbn = '978-0-307-58837-1';
-
-SELECT * FROM issued_status
-WHERE issued_book_isbn = '978-0-307-58837-1';
-
-SELECT * FROM return_status
-WHERE issued_id = 'IS135';
-
--- calling function 
-CALL add_return_records('RS138', 'IS135', 'Good');
-
--- calling function 
-CALL add_return_records('RS148', 'IS140', 'Good');
 
 **Task 15: Branch Performance Report**  
 Create a query that generates a performance report for each branch, showing the number of books issued, the number of books returned, and the total revenue generated from book rentals.
